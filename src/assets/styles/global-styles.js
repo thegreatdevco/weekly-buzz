@@ -2,11 +2,11 @@ import { css } from '@emotion/react'
 
 const globalStyles = css`
   :root {
-    --color-primary: '#2ADE93';
-    --color-secondary: '#F32764';
-    --color-dark: '#14062D';
-    --color-med: '#838383';
-    --color-light: '#FBFCFE';
+    --color-primary: #2ADE93;
+    --color-secondary: #F32764;
+    --color-dark: #14062D;
+    --color-med: #838383;
+    --color-light: #FBFCFE;
     --border-radius: 10px;
     --transition: all 0.3s ease-in-out;
     --max-width: 1200px;
@@ -22,7 +22,10 @@ const globalStyles = css`
   body {
     font-size: 16px;
     line-height: 1.5;
-    background: red;
+    background: var(--color-light);
+    color: var(--color-dark);
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
   }
 `
 
