@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import '@fontsource/poppins'
 
 const globalStyles = css`
   :root {
@@ -24,8 +25,34 @@ const globalStyles = css`
     line-height: 1.5;
     background: var(--color-light);
     color: var(--color-dark);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
+  }
+
+  a {
+    color: var(--color-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /* utility classes */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 4rem;
+    border: transparent;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    outline: transparent;
+    font-size: 1rem;
   }
 `
 

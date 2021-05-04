@@ -7,7 +7,16 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
       <header></header>
-      <main>{children}</main>
+      <main
+        css={css`
+          max-width: var(--max-width);
+          margin: auto;
+          padding: 1rem;
+          margin: 4rem auto;
+        `}
+      >
+        {children}
+      </main>
       <footer></footer>
     </>
   )
