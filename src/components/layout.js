@@ -1,12 +1,13 @@
 import React from 'react'
 import globalStyles from '../assets/styles/global-styles'
 import { Global, css } from '@emotion/react'
+import Header from './header'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Global styles={globalStyles} />
-      <header></header>
+      <Header />
       <main
         css={css`
           max-width: var(--max-width);
