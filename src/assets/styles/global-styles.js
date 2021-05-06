@@ -54,8 +54,6 @@ const globalStyles = css`
     outline: transparent;
     font-size: 1rem;
   }
-
-  
 `
 
 export default globalStyles
