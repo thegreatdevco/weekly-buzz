@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Showcase from '../components/showcase'
 
 const index = () => {
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <Showcase />
     </Layout>
   )
 }

@@ -13,7 +13,6 @@ const Navbar = () => {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1rem;
 
         .nav-center {
           width: 90vw;
@@ -45,15 +44,16 @@ const Navbar = () => {
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          text-align: center;
           transition: var(--transition);
         }
 
         .show-links {
-          height: 100vh;
+          height: 24rem;
         }
 
         .nav-link {
+          display: block;
+          text-align: center;
           font-size: 1.5rem;
           text-transform: uppercase;
           color: var(--color-dark);
