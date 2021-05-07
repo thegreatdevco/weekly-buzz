@@ -37,6 +37,12 @@ const Navbar = () => {
           font-size: 3rem;
           background: transparent;
           cursor: pointer;
+          transition: var(--transition);
+
+          &:hover {
+            color: var(--color-secondary);
+            transform: rotate(45deg);
+          }
         }
 
         .nav-links {
@@ -48,7 +54,7 @@ const Navbar = () => {
         }
 
         .show-links {
-          height: 24rem;
+          height: 100vh;
         }
 
         .nav-link {
@@ -73,8 +79,13 @@ const Navbar = () => {
         .contact-link {
           background: var(--color-secondary);
           color: var(--color-light);
-          padding: 0.25rem;
+          padding: 0.25rem 0.5rem;
           border-radius: var(--border-radius);
+
+          &:hover {
+            background: var(--color-dark);
+            color: var(--color-light);
+          }
         }
 
         @media screen and (min-width: 992px) {
