@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import '@fontsource/poppins'
+import '@fontsource/poppins/900.css'
 
 const globalStyles = css`
   :root {
@@ -43,16 +44,33 @@ const globalStyles = css`
     width: 100%;
   }
 
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 0.5;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
   /* utility classes */
   .btn {
     display: inline-block;
-    padding: 0.5rem 4rem;
+    padding: 0.75rem 4rem;
     border: transparent;
     cursor: pointer;
     border-radius: var(--border-radius);
     transition: var(--transition);
     outline: transparent;
     font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn-secondary {
+    background: var(--color-secondary);
+    color: var(--color-light);
+
+    &:hover {
+      background: var(--color-dark);
+      color: var(--color-light);
+    }
   }
 `
 
