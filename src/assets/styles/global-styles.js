@@ -45,14 +45,15 @@ const globalStyles = css`
   }
 
   h1,h2,h3,h4,h5,h6 {
-    margin-bottom: 1rem;
     line-height: 0.5;
+    font-weight: 900;
+    margin-bottom: 1rem;
   }
 
   /* utility classes */
   .btn {
     display: inline-block;
-    padding: 0.5rem 4rem;
+    padding: 0.75rem 4rem;
     border: transparent;
     cursor: pointer;
     border-radius: var(--border-radius);
