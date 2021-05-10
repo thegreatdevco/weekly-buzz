@@ -4,15 +4,17 @@ import '@fontsource/poppins/900.css'
 
 const globalStyles = css`
   :root {
-    --color-primary: #2ADE93;
-    --color-secondary: #F32764;
-    --color-dark: #14062D;
+    --color-primary: #2ade93;
+    --color-secondary: #f32764;
+    --color-dark: #14062d;
     --color-med: #838383;
-    --color-light: #FBFCFE;
+    --color-light: #fbfcfe;
     --border-radius: 3px;
     --transition: all 0.3s ease-in-out;
     --max-width: 1200px;
-    --box-shadow: box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow-light: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 
   * {
@@ -44,7 +46,12 @@ const globalStyles = css`
     width: 100%;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     line-height: 0.5;
     font-weight: 900;
     margin-bottom: 1rem;
