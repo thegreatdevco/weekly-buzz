@@ -30,6 +30,10 @@ const ReviewCard = ({ reviews = [] }) => {
           color: var(--color-primary);
           margin-bottom: 1rem;
         }
+
+        @media screen and (min-width: 768px) {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
       `}
     >
       {reviews.map(review => {
