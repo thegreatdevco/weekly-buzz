@@ -33,6 +33,10 @@ const AllReviews = () => {
         display: grid;
         gap: 2rem;
         text-align: center;
+
+        @media screen and (min-width: 768px) {
+          grid-template-columns: 200px 1fr;
+        }
       `}
     >
       <Tags reviews={reviews} />

@@ -38,6 +38,12 @@ const Tags = ({ reviews }) => {
         .check-icon {
           margin-right: 2rem;
         }
+
+        @media screen and (min-width: 768px) {
+          .check-icon {
+            margin-right: 0.25rem;
+          }
+        }
       `}
     >
       <h4>Search Tags</h4>
