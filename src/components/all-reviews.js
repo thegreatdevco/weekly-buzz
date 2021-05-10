@@ -2,6 +2,7 @@ import React from 'react'
 import ReviewCard from './review-card'
 import Tags from './tags'
 import { graphql, useStaticQuery } from 'gatsby'
+import { css } from '@emotion/react'
 
 const query = graphql`
   {
@@ -27,7 +28,13 @@ const AllReviews = () => {
   const reviews = data.allContentfulReview.nodes
 
   return (
-    <div>
+    <div
+      css={css`
+        display: grid;
+        gap: 2rem;
+        text-align: center;
+      `}
+    >
       <Tags reviews={reviews} />
       <ReviewCard reviews={reviews} />
     </div>
