@@ -14,12 +14,27 @@ const Footer = () => {
         a {
           color: var(--color-primary);
         }
+
+        .wrap {
+          max-width: var(--max-width);
+          margin: auto;
+        }
+
+        @media screen and (min-width: 992px) {
+          .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
       `}
     >
-      <p>&copy; Weekly Buzz {new Date().getFullYear()}</p>
-      <p>
-        Designed & Developed By: <a href="thegreatdevco.com">TGDC</a>
-      </p>
+      <div className="wrap">
+        <p>&copy; Weekly Buzz {new Date().getFullYear()}</p>
+        <p>
+          Designed & Developed By: <a href="thegreatdevco.com">TGDC</a>
+        </p>
+      </div>
     </div>
   )
 }
