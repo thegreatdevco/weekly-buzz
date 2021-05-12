@@ -79,8 +79,9 @@ const globalStyles = css`
     color: var(--color-light);
 
     &:hover {
-      background: var(--color-dark);
-      color: var(--color-light);
+      background: transparent;
+      box-shadow: var(--shadow);
+      color: var(--color-dark);
     }
   }
 `

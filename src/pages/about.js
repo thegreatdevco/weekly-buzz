@@ -18,6 +18,7 @@ const about = ({
           .about-section {
             display: grid;
             grid-template-column: 1fr;
+            margin-bottom: 4rem;
           }
 
           .about-info {
