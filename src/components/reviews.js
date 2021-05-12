@@ -13,6 +13,7 @@ const Reviews = ({ reviews = [] }) => {
 
         .card {
           margin: 0.25rem 0;
+          text-align: center;
           background: var(--color-light);
           box-shadow: var(--shadow);
           padding: 1rem;
@@ -20,6 +21,10 @@ const Reviews = ({ reviews = [] }) => {
           &:hover {
             box-shadow: var(--shadow-light);
           }
+        }
+
+        .review-img {
+          height: 300px;
         }
 
         h4 {
@@ -33,6 +38,10 @@ const Reviews = ({ reviews = [] }) => {
 
         @media screen and (min-width: 768px) {
           grid-template-columns: repeat(2, 1fr);
+
+          .review-img {
+            height: 200px;
+          }
         }
 
         @media screen and (min-width: 1100px) {
@@ -47,7 +56,11 @@ const Reviews = ({ reviews = [] }) => {
 
         return (
           <Link to={`/${slug}`} key={id} className="card">
-            <GatsbyImage image={imagePath} alt="review image" />
+            <GatsbyImage
+              image={imagePath}
+              alt="review image"
+              className="review-img"
+            />
             <h4>{name}</h4>
             <p>{company}</p>
             <h5>{category}</h5>

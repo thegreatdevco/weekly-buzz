@@ -24,8 +24,8 @@ const Tags = ({ reviews }) => {
           transition: var(--transition);
 
           &:hover {
-            background: var(--color-dark);
-            color: var(--color-light);
+            background: transparent;
+            box-shadow: var(--shadow);
           }
         }
 

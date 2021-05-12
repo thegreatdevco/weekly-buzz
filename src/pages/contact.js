@@ -18,6 +18,7 @@ const contact = ({
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
+            margin-bottom: 4rem;
           }
 
           .contact-info {
