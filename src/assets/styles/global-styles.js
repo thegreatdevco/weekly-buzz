@@ -58,6 +58,10 @@ const globalStyles = css`
   }
 
   /* utility classes */
+  .page {
+    margin: 2rem 0;
+  }
+
   .btn {
     display: inline-block;
     padding: 0.75rem 4rem;

@@ -13,11 +13,6 @@ const Layout = ({ children }) => {
         css={css`
           max-width: var(--max-width);
           padding: 1rem;
-          margin: 2rem auto;
-
-          @media screen and (min-width: 768px) {
-            margin-top: 4rem;
-          }
         `}
       >
         {children}
