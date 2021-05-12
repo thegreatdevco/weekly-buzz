@@ -7,7 +7,9 @@ const index = () => {
   return (
     <Layout>
       <Showcase />
-      <AllReviews />
+      <section className="page">
+        <AllReviews />
+      </section>
     </Layout>
   )
 }
