@@ -1,5 +1,5 @@
 import React from 'react'
-import ReviewCard from './review-card'
+import ReviewCard from './reviews'
 import Tags from './tags'
 import { graphql, useStaticQuery } from 'gatsby'
 import { css } from '@emotion/react'
@@ -33,6 +33,7 @@ const AllReviews = () => {
         display: grid;
         gap: 2rem;
         text-align: center;
+        margin-bottom: 1rem;
 
         @media screen and (min-width: 768px) {
           grid-template-columns: 200px 1fr;

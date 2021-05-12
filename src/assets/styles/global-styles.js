@@ -59,7 +59,7 @@ const globalStyles = css`
 
   /* utility classes */
   .page {
-    margin: 2rem 0;
+    margin: 4rem 0;
   }
 
   .btn {

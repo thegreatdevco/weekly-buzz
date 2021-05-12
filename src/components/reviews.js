@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import slugify from 'slugify'
 import { css } from '@emotion/react'
 
-const ReviewCard = ({ reviews = [] }) => {
+const Reviews = ({ reviews = [] }) => {
   return (
     <div
       css={css`
@@ -32,7 +32,11 @@ const ReviewCard = ({ reviews = [] }) => {
         }
 
         @media screen and (min-width: 768px) {
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: 1100px) {
+          grid-template-columns: repeat(3, 1fr);
         }
       `}
     >
@@ -54,4 +58,4 @@ const ReviewCard = ({ reviews = [] }) => {
   )
 }
 
-export default ReviewCard
+export default Reviews

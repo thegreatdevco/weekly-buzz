@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/react'
+import Reviews from '../components/reviews'
 
-const about = () => {
+const about = ({
+  data: {
+    allContentfulReview: { nodes: reviews },
+  },
+}) => {
   return (
     <Layout>
       <main
@@ -57,9 +62,34 @@ const about = () => {
             </Link>
           </div>
         </section>
+        <section className="featured-reviews">
+          <Reviews reviews={reviews} />
+        </section>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulReview(
+      filter: { featured: { eq: true } }
+      sort: { order: ASC, fields: name }
+    ) {
+      nodes {
+        company
+        category
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+        content {
+          tags
+        }
+        name
+        id
+      }
+    }
+  }
+`
 
 export default about
