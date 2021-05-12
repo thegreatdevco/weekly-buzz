@@ -1,5 +1,5 @@
 import React from 'react'
-import ReviewCard from './review-card'
+import ReviewCard from './reviews'
 import Tags from './tags'
 import { graphql, useStaticQuery } from 'gatsby'
 import { css } from '@emotion/react'

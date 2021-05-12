@@ -1,8 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { css } from '@emotion/react'
+import Reviews from '../components/reviews'
+import { graphql } from 'gatsby'
 
-const contact = () => {
+const contact = ({
+  data: {
+    allContentfulReview: { nodes: reviews },
+  },
+}) => {
   return (
     <Layout>
       <main
@@ -94,9 +100,34 @@ const contact = () => {
             </form>
           </div>
         </section>
+        <section className="featured-reviews">
+          <Reviews reviews={reviews} />
+        </section>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulReview(
+      filter: { featured: { eq: true } }
+      sort: { order: ASC, fields: name }
+    ) {
+      nodes {
+        company
+        category
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+        content {
+          tags
+        }
+        name
+        id
+      }
+    }
+  }
+`
 
 export default contact
