@@ -55,6 +55,7 @@ const Navbar = () => {
 
         .show-links {
           height: 100vh;
+          margin-top: 5rem;
         }
 
         .nav-link {
@@ -64,28 +65,17 @@ const Navbar = () => {
           text-transform: uppercase;
           color: var(--color-dark);
           letter-spacing: 2px;
-          margin: 1rem auto;
+          margin: 2rem auto;
           transition: var(--transition);
+          border-bottom: 0.25rem solid transparent;
 
           &:hover {
-            color: var(--color-secondary);
+            border-bottom: 0.25rem solid var(--color-primary);
           }
         }
 
         .active-link {
           color: var(--color-primary);
-        }
-
-        .contact-link {
-          background: var(--color-secondary);
-          color: var(--color-light);
-          padding: 0.25rem 0.5rem;
-          border-radius: var(--border-radius);
-
-          &:hover {
-            background: var(--color-dark);
-            color: var(--color-light);
-          }
         }
 
         @media screen and (min-width: 992px) {
@@ -112,6 +102,10 @@ const Navbar = () => {
             height: auto !important;
             flex-direction: row;
             align-items: center;
+          }
+
+          .main-links {
+            display: flex;
           }
 
           .nav-link {
@@ -150,6 +144,7 @@ const Navbar = () => {
           >
             About
           </Link>
+
           <Link
             to="/contact"
             className="nav-link contact-link"
