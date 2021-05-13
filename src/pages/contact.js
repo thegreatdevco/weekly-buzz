@@ -86,11 +86,11 @@ const Contact = ({
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Your Email</label>
-                <input type="email" name="email" id="name" />
+                <input type="email" name="email" id="name" required />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Your Name</label>
@@ -99,6 +99,7 @@ const Contact = ({
                   id="message"
                   cols="30"
                   rows="10"
+                  required
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-secondary">
