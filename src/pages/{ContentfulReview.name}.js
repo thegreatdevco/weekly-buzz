@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
-import slugify from 'slugify'
+
 import { css } from '@emotion/react'
 
 const ReviewTemplate = ({ data }) => {
