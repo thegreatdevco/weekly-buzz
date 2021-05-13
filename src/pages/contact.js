@@ -3,12 +3,18 @@ import Layout from '../components/layout'
 import { css } from '@emotion/react'
 import Reviews from '../components/reviews'
 import { graphql } from 'gatsby'
+import { useForm } from '@formspree/react'
 
-const contact = ({
+const Contact = ({
   data: {
     allContentfulReview: { nodes: reviews },
   },
 }) => {
+  const [state, handleSubmit] = useForm('xdoyegze')
+  if (state.succeeded) {
+    return <p>Thanks, message sent!</p>
+  }
+
   return (
     <Layout>
       <main
@@ -77,14 +83,14 @@ const contact = ({
             </p>
           </div>
           <div className="contact-form">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
                 <input type="text" name="name" id="name" />
               </div>
               <div className="form-group">
-                <label htmlFor="name">Your Email</label>
-                <input type="text" name="email" id="name" />
+                <label htmlFor="email">Your Email</label>
+                <input type="email" name="email" id="name" />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Your Name</label>
@@ -131,4 +137,4 @@ export const query = graphql`
   }
 `
 
-export default contact
+export default Contact
