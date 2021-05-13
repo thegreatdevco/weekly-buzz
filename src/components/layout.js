@@ -9,15 +9,25 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
       <Navbar />
-      <main
+      <div
         css={css`
-          max-width: var(--max-width);
-          padding: 1rem;
-          margin: 0 auto;
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
         `}
       >
-        {children}
-      </main>
+        <main
+          css={css`
+            max-width: var(--max-width);
+            padding: 1rem;
+            margin: 0 auto;
+            flex-grow: 1;
+          `}
+        >
+          {children}
+        </main>
+      </div>
+
       <Footer />
     </>
   )

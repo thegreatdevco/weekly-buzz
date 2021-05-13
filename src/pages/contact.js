@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 import Reviews from '../components/reviews'
 import { graphql } from 'gatsby'
 import { useForm } from '@formspree/react'
+import SEO from '../components/seo'
 
 const Contact = ({
   data: {
@@ -17,6 +18,10 @@ const Contact = ({
 
   return (
     <Layout>
+      <SEO
+        title="Contact Page"
+        description="Contact page for Weekly Buzz cannabis reviews"
+      />
       <main
         className="page"
         css={css`

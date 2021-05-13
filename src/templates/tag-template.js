@@ -1,16 +1,29 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Reviews from '../components/reviews'
+import SEO from '../components/seo'
+import { css } from '@emotion/react'
 
-const TagTemplate = ({ data }) => {
+const TagTemplate = ({ data, pageContext }) => {
   const reviews = data.allContentfulReview.nodes
 
   return (
     <Layout>
+      <SEO title={pageContext.tag} />
       <div className="tags-page">
-        <h3>All reviews containing the </h3>
         <Reviews reviews={reviews} />
+        <div
+          css={css`
+            display: block;
+            text-align: center;
+            margin: 1rem auto;
+          `}
+        >
+          <Link to="/" className="btn btn-secondary">
+            Back Home
+          </Link>
+        </div>
       </div>
     </Layout>
   )

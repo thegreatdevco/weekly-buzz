@@ -5,6 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'weekly-buzz',
+    description: 'A website that reviews cannabis strains on a weekly basis',
   },
   plugins: [
     {

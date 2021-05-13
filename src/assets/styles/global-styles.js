@@ -72,6 +72,7 @@ const globalStyles = css`
     outline: transparent;
     font-size: 1rem;
     margin-top: 2rem;
+    text-align: center;
   }
 
   .btn-secondary {

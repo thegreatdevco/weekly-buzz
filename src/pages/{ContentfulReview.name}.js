@@ -4,9 +4,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 
 import { css } from '@emotion/react'
+import SEO from '../components/seo'
 
 const ReviewTemplate = ({ data }) => {
-  console.log(data)
   const {
     name,
     company,
@@ -20,6 +20,7 @@ const ReviewTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={name} description={description} />
       <main
         css={css`
           header {
