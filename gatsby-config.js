@@ -18,12 +18,12 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/assets/images/icon.png',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     icon: 'src/assets/images/icon.png',
+    //   },
+    // },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
