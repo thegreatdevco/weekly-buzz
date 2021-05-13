@@ -6,6 +6,7 @@ import slugify from 'slugify'
 import { css } from '@emotion/react'
 
 const ReviewTemplate = ({ data }) => {
+  console.log(data)
   const {
     name,
     company,
@@ -19,12 +20,13 @@ const ReviewTemplate = ({ data }) => {
 
   return (
     <Layout>
-      {/* header */}
-      <header
+      <main
         css={css`
-          height: 40vh;
-          position: relative;
-          margin-bottom: 2rem;
+          header {
+            height: 40vh;
+            position: relative;
+            margin-bottom: 2rem;
+          }
 
           .header-img {
             height: 100%;
@@ -43,23 +45,69 @@ const ReviewTemplate = ({ data }) => {
             align-items: center;
             color: var(--color-light);
             background: rgba(0, 0, 0, 0.4);
+
+            p {
+              color: var(--color-primary);
+              margin-bottom: 1rem;
+            }
           }
 
-          p {
-            color: var(--color-primary);
-            margin-bottom: 1rem;
+          h4 {
+            margin: 2rem 0;
+          }
+
+          .category {
+            color: var(--color-secondary);
+            margin-left: 1rem;
+            font-weight: 100;
+          }
+
+          .rank {
+            color: var(--color-med);
+            margin-left: 1rem;
+            font-weight: 100;
+          }
+
+          .review-description {
+            margin: 4rem 0;
+
+            h4 {
+              margin-bottom: 1rem;
+            }
+
+            p {
+              color: var(--color-med);
+            }
           }
         `}
       >
-        <GatsbyImage image={pathToImage} alt={name} className="header-img" />
-        <div className="header-content">
-          <p>{company}</p>
-          <h1>{name}</h1>
+        {/* image */}
+        <header>
+          <GatsbyImage image={pathToImage} alt={name} className="header-img" />
+
+          <div className="header-content">
+            <p>{company}</p>
+            <h1>{name}</h1>
+          </div>
+        </header>
+
+        {/* info */}
+        <div className="review-info">
+          <h4>
+            Category: <span className="category">{category}</span>
+          </h4>
+          <h4>
+            Rank: <span className="rank">{rank} out of 5</span>
+          </h4>
         </div>
-      </header>
-      {/* info */}
-      {/* description */}
-      {/* featured reviews */}
+
+        {/* description */}
+        <div className="review-description">
+          <h4>Review:</h4>
+          <p>{description}</p>
+        </div>
+        {/* featured reviews */}
+      </main>
     </Layout>
   )
 }
