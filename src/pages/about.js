@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/react'
 import Reviews from '../components/reviews'
+import SEO from '../components/seo'
 
 const about = ({
   data: {
@@ -12,6 +13,10 @@ const about = ({
 }) => {
   return (
     <Layout>
+      <SEO
+        title="About Page"
+        description="The about page for Weekly Buzz cannabis reviews"
+      />
       <main
         className="page"
         css={css`
