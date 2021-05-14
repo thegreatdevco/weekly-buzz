@@ -121,7 +121,10 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="Weekly Buzz Logo" className="img" />
           </Link>
-          <button onClick={() => setShow(!show)}>
+          <button
+            aria-label="hamburger menu button"
+            onClick={() => setShow(!show)}
+          >
             <CgMenuRight />
           </button>
         </div>

@@ -12,6 +12,10 @@ const Tags = ({ reviews }) => {
   return (
     <div
       css={css`
+        h3 {
+          padding-top: 1rem;
+        }
+
         .tag {
           display: flex;
           justify-content: space-between;
@@ -46,7 +50,7 @@ const Tags = ({ reviews }) => {
         }
       `}
     >
-      <h4>Search Tags</h4>
+      <h3>Search Tags</h3>
       <div className="tags-list">
         {newTags.map((tag, index) => {
           const [text, value] = tag
