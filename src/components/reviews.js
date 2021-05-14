@@ -34,6 +34,8 @@ const Reviews = ({ reviews = [] }) => {
         p {
           color: var(--color-primary);
           margin-bottom: 1rem;
+          background: var(--color-med);
+          border-radius: var(--border-radius);
         }
 
         @media screen and (min-width: 768px) {
