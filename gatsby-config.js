@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'weekly-buzz',
     description: 'A website that reviews cannabis strains on a weekly basis',
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     {
