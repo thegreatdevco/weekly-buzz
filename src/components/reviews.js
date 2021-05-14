@@ -34,7 +34,7 @@ const Reviews = ({ reviews = [] }) => {
         p {
           color: var(--color-primary);
           margin-bottom: 1rem;
-          background: var(--color-med);
+          background: var(--color-dark);
           border-radius: var(--border-radius);
         }
 
