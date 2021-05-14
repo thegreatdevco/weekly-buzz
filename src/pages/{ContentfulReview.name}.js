@@ -29,6 +29,11 @@ const ReviewTemplate = ({ data }) => {
             margin-bottom: 2rem;
           }
 
+          h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+          }
+
           .header-img {
             height: 100%;
             border-radius: var(--border-radius);
@@ -78,6 +83,12 @@ const ReviewTemplate = ({ data }) => {
 
             p {
               color: var(--color-med);
+            }
+          }
+
+          @media screen and (min-width: 768px) {
+            h1 {
+              font-size: 4rem;
             }
           }
         `}
